@@ -1,0 +1,5 @@
+[ 2026-03-29 22:46:31,742 ] __main__ - ERROR - 
+Error occurred in script: [D:\Industrial defect detection\industrial_defect_detection\exception.py]
+Line number: [44]
+Error message: [division by zero]
+
