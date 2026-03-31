@@ -1,0 +1,115 @@
+# =========================
+# PYTHON
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# =========================
+# VIRTUAL ENVIRONMENTS
+# =========================
+env/
+venv/
+.venv/
+idd/
+ENV/
+env.bak/
+venv.bak/
+
+# =========================
+# ENVIRONMENT VARIABLES (VERY IMPORTANT)
+# =========================
+.env
+.env.*
+*.env
+
+# =========================
+# LOGS
+# =========================
+logs/
+*.log
+
+# =========================
+# ARTIFACTS (ML PIPELINE OUTPUT)
+# =========================
+artifacts/
+saved_models/
+checkpoints/
+outputs/
+
+# =========================
+# DATASETS (DO NOT PUSH)
+# =========================
+dataset/
+data/
+*.zip
+*.tar
+*.gz
+*.csv
+*.parquet
+
+# =========================
+# DVC
+# =========================
+.dvc/
+.dvcignore
+dvc.lock
+
+# (Keep .dvc files if you want to track metadata)
+*.dvc
+
+# =========================
+# MLFLOW
+# =========================
+mlruns/
+
+# =========================
+# JUPYTER NOTEBOOK
+# =========================
+.ipynb_checkpoints
+
+# =========================
+# IDE / EDITOR
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# OS FILES
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# DOCKER (OPTIONAL)
+# =========================
+*.pid
+*.seed
+
+# =========================
+# TEST / CACHE
+# =========================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =========================
+# MISC
+# =========================
+*.bak
+*.tmp
+*.temp
