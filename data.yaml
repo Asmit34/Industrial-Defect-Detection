@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 6
+names: ['boots', 'gloves', 'goggles', 'helmet', 'person', 'vest']
+
+roboflow:
+  workspace: rbyz
+  project: ppe-6-classes-ntld9
+  version: 6
+  license: MIT
+  url: https://universe.roboflow.com/rbyz/ppe-6-classes-ntld9/dataset/6
