@@ -18,7 +18,7 @@ DATA_INGESTION_DIR_NAME: str = "data_ingestion"
 DATA_INGESTION_FEATURE_STORE_DIR: str = "feature_store"
 DATA_INGESTION_INGESTED_DIR: str = "ingested"
 
-DATA_DOWNLOAD_URL: str = "https://drive.google.com/uc?id=1Ire26eVZD3pUtOhgItiBgbBRFUEOXuhx"
+DATA_DOWNLOAD_URL: str = "https://drive.google.com/uc?id=1WY93epvY2DUvFnKDLICv2JcUzLJyPmn5"
 
 DATA_INGESTION_LOCAL_DATA_FILE: str = "data.zip"
 

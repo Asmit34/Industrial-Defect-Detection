@@ -1,3 +1,4 @@
+
 import os
 
 from industrial_defect_detection.entity.config_entity import (

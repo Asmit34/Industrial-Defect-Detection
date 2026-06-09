@@ -2,7 +2,7 @@ import os
 import sys
 import zipfile
 import gdown
-
+from urllib.parse import urlparse, parse_qs
 from industrial_defect_detection.logger import get_logger
 from industrial_defect_detection.exception import CustomException
 from industrial_defect_detection.entity.config_entity import DataIngestionConfig
@@ -26,23 +26,43 @@ class DataIngestion:
             dataset_url = self.config.data_download_url
             zip_file_path = self.config.local_data_file_path
 
+            # Ensure directory exists
             os.makedirs(self.config.data_ingestion_dir, exist_ok=True)
 
-            logger.info(f"Downloading data from {dataset_url}")
+            logger.info(f"Downloading data from: {dataset_url}")
 
-            # Extract file_id
-            file_id = dataset_url.split("/")[-2]
+            # =========================
+            # Extract Google Drive file ID safely
+            # =========================
+            parsed_url = urlparse(dataset_url)
+            query_params = parse_qs(parsed_url.query)
+
+            file_id = query_params.get("id", [None])[0]
+
+            if file_id is None:
+                raise ValueError(
+                    f"Invalid Google Drive URL. Cannot extract file id from: {dataset_url}"
+                )
+
+            # Convert to direct download URL
             download_url = f"https://drive.google.com/uc?id={file_id}"
 
-            gdown.download(download_url, zip_file_path, quiet=False)
+            # =========================
+            # Download file
+            # =========================
+            gdown.download(
+                download_url,
+                zip_file_path,
+                quiet=False,
+                fuzzy=True
+            )
 
-            logger.info(f"Downloaded file at {zip_file_path}")
+            logger.info(f"Downloaded file successfully at: {zip_file_path}")
 
             return zip_file_path
 
         except Exception as e:
             raise CustomException(e, sys)
-
     # =========================
     # EXTRACT ZIP FILE
     # =========================
