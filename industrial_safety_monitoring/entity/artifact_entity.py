@@ -20,6 +20,7 @@ class DataIngestionArtifact:
 @dataclass
 class DataValidationArtifact:
     validation_status: bool
+    # validated_data_path: str
     message: Optional[str] = None
 
 
@@ -29,8 +30,8 @@ class DataValidationArtifact:
 
 @dataclass
 class DataTransformationArtifact:
-    transformed_train_path: str
-    transformed_test_path: str
+    dataset_yaml_path: str
+    transformed_data_path: str
 
 
 # =========================
@@ -60,3 +61,8 @@ class ModelEvaluationArtifact:
 @dataclass
 class ModelPusherArtifact:
     saved_model_path: str
+
+@dataclass
+class ViolationArtifact:
+    violation_count: int
+    violation_type: str

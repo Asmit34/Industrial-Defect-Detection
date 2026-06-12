@@ -5,7 +5,7 @@ from datetime import datetime
 # GENERAL PIPELINE CONFIG
 # =========================
 
-PIPELINE_NAME: str = "industrial_defect_detection"
+PIPELINE_NAME: str = "industrial_safety_monitoring"
 ARTIFACT_DIR: str = "artifacts"
 
 TIMESTAMP: str = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -18,7 +18,7 @@ DATA_INGESTION_DIR_NAME: str = "data_ingestion"
 DATA_INGESTION_FEATURE_STORE_DIR: str = "feature_store"
 DATA_INGESTION_INGESTED_DIR: str = "ingested"
 
-DATA_DOWNLOAD_URL: str = "https://drive.google.com/uc?id=1WY93epvY2DUvFnKDLICv2JcUzLJyPmn5"
+DATA_DOWNLOAD_URL: str = "https://drive.google.com/uc?id=1U93zu2A0HAIEMY0wbmWUUDI789ZFLBsB"
 
 DATA_INGESTION_LOCAL_DATA_FILE: str = "data.zip"
 
@@ -79,3 +79,22 @@ INFERENCE_BATCH_SIZE: int = 1
 
 DRIFT_REPORT_FILE_NAME: str = "drift_report.json"
 PERFORMANCE_REPORT_FILE_NAME: str = "performance_report.json"
+
+NUM_CLASSES = 14
+
+CLASS_NAMES = [
+    "Fall-Detected",
+    "Gloves",
+    "Goggles",
+    "Hardhat",
+    "Ladder",
+    "Mask",
+    "NO-Gloves",
+    "NO-Goggles",
+    "NO-Hardhat",
+    "NO-Mask",
+    "NO-Safety Vest",
+    "Person",
+    "Safety Cone",
+    "Safety Vest"
+]

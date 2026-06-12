@@ -1,7 +1,7 @@
 
 import os
 from dataclasses import dataclass
-import industrial_defect_detection.constants.training_pipeline.constant as tp
+import industrial_safety_monitoring.constants.training_pipeline.constant as tp
 
 
 # =========================

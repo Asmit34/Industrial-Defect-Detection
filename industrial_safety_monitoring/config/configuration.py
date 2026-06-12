@@ -1,7 +1,7 @@
 
 import os
 
-from industrial_defect_detection.entity.config_entity import (
+from industrial_safety_monitoring.entity.config_entity import (
     TrainingPipelineConfig,
     DataIngestionConfig,
     DataValidationConfig,
@@ -12,7 +12,7 @@ from industrial_defect_detection.entity.config_entity import (
     MonitoringConfig
 )
 
-from industrial_defect_detection.logger import get_logger
+from industrial_safety_monitoring.logger import get_logger
 
 logger = get_logger(__name__)
 

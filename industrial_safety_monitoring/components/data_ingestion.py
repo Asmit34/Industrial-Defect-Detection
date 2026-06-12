@@ -3,10 +3,10 @@ import sys
 import zipfile
 import gdown
 from urllib.parse import urlparse, parse_qs
-from industrial_defect_detection.logger import get_logger
-from industrial_defect_detection.exception import CustomException
-from industrial_defect_detection.entity.config_entity import DataIngestionConfig
-from industrial_defect_detection.entity.artifact_entity import DataIngestionArtifact
+from industrial_safety_monitoring.logger import get_logger
+from industrial_safety_monitoring.exception import CustomException
+from industrial_safety_monitoring.entity.config_entity import DataIngestionConfig
+from industrial_safety_monitoring.entity.artifact_entity import DataIngestionArtifact
 
 logger = get_logger(__name__)
 

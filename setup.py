@@ -18,7 +18,7 @@ def get_requirements(file_path: str) -> List[str]:
     return requirements
 
 setup(
-    name="Industrial Defect Detection",
+    name="industrial_safety_monitoring",
     version="0.0.1",
     author="Asmit Oli",
     author_email="oliasmit272@gmail.com",

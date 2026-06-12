@@ -1,6 +1,6 @@
 import sys
 import traceback
-from industrial_defect_detection.logger import get_logger
+from industrial_safety_monitoring.logger import get_logger
 
 logger = get_logger(__name__)
 

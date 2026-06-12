@@ -1,4 +1,4 @@
-from industrial_defect_detection.pipeline.training_pipeline import TrainPipeline
+from industrial_safety_monitoring.pipeline.training_pipeline import TrainPipeline
 
 if __name__ == "__main__":
 
